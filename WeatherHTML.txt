@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+
+<div class="container">
+<h2 id="city">Toronto</h2>
+<div class='middle'>  
+Weather Today! 
+<br></br>  
+<img src="" alt="icon" id="icon"> 
+<div class="degrees">
+ <h1 id=temp>19</h1>
+  <span>&#176;</span>
+</div>
+  <h3 id="descrip">Sunny</h3>
+  </div>
+  
+</div>
+
+</html>

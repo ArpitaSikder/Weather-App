@@ -1,0 +1,40 @@
+$(document).ready(function(){
+  
+  //lets get the location 
+  navigator.geolocation.getCurrentPosition(success, error);
+  
+  function success(pos){
+    console.log(pos);
+    var lat=(pos.coords.latitude);
+    var long= (pos.coords.longitude);
+    var accurate = pos.coords.accuracy;
+    console.log(accurate);
+    console.log(lat);
+    console.log(long);
+    weather(lat,long);
+  }  
+  function error(){
+    console.log('Could not find the location');
+}
+function weather(lat,long){
+var URL ='https://fcc-weather-api.glitch.me/api/current?lat='+lat+'&lon='+long;
+$.getJSON(URL, function(data){
+  console.log(data);
+  updateDOM(data);
+})
+  }  
+   function updateDOM(data){
+   var city = data.name;
+   var temp = data.main.temp; 
+   var des=data.weather[0].description; 
+   var icon = data.weather[0].icon;
+   console.log(city);
+   console.log(temp);
+   console.log(des);    
+   $('#city').html(city); 
+   $('#temp').html(Math.round(temp)); 
+   $('#descrip').html(des); 
+   $('#icon').attr('src',icon);
+   }
+  
+})
