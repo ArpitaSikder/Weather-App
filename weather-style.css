@@ -1,0 +1,156 @@
+body{
+    height:100%;
+    background-color:black;
+    margin:0;
+    padding:0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+.star i{
+    position: absolute;
+    z-index:20;
+    font-size:18px;
+    color:white;
+    left:1200px;
+    top:100px;
+}
+
+
+.meteor i{
+    position: absolute;
+    z-index:20;
+    font-size:25px;
+    color:white;
+    left:100px;
+    top:200px;
+}
+.moon i{
+    position: absolute;
+    z-index:20;
+    font-size:40px;
+    color:white;
+    left:300px;
+    top:100px
+
+}
+
+.rocket i{
+    position: absolute;
+    z-index:20;
+    font-size:20px;
+    color:white;
+    left:1300px;
+    top:200px;
+}
+
+
+
+.app-title{
+    position: absolute;
+    top: 150px;
+    /*left: 570px;*/   /*taking this line out helped the title stay in middle*/
+    z-index:20;
+    font-size: 50px;
+    font-weight: bold;
+    color:white;
+}
+
+.app-title i{
+    width:50px;
+    height:50px;
+    font-size:50px;
+    color:white;
+}
+
+.container{
+    display:flex;
+    justify-content:center;
+    margin-top:10px;
+    margin-bottom:100px;
+}
+
+.weather-container{
+    width: 400px;
+    height: 600px;
+    background-color: aliceblue;
+    color:brown;
+    border-radius:50px;
+    padding:50px; 
+   
+}
+
+.weather-contents{
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    
+}
+
+.icons img{
+    width:200px;
+    flex-grow:1;
+    border-radius:50%;
+    background: black;
+}
+
+.temperature{
+   font-size: 30px;
+    color: black;
+   flex-grow:1;
+   
+}
+
+.Description{
+    font-size: 30px;
+    color: black;
+   flex-grow:1;
+   
+}
+
+.Place{
+    font-size: 30px;
+    color: black;
+   flex-grow:1;
+   
+}
+
+
+.b1{
+    position: absolute;
+    z-index:20;
+    top: 800px;
+    font-size: 100px;
+    color: beige;
+    left:0%;
+}
+.b2{
+position: absolute;
+z-index: 20;
+top: 800px;
+font-size: 100px;
+color: beige;
+left: 85%;
+}
+.b3{
+    position: absolute;
+    z-index: 20;
+    top: 800px;
+    font-size: 100px;
+    left: 5%;
+    color: beige;
+
+}
+.b4{
+position: absolute;
+z-index: 20;
+top: 800px;
+font-size: 100px;
+color: beige;
+left:90%;
+}
+
+.note{
+    font-size:15px;
+    color:white;
+}
