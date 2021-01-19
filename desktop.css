@@ -1,0 +1,152 @@
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  background-color: black;
+}
+
+.background {
+  position: absolute;
+  z-index: -1;
+  background-attachment: fixed;
+  background-size: cover;
+  height: auto;
+}
+
+.star i {
+  position: absolute;
+  z-index: 1;
+  font-size: 18px;
+  color: white;
+  left: 1200px;
+  top: 100px;
+}
+
+.meteor i {
+  position: absolute;
+  z-index: 1;
+  font-size: 25px;
+  color: white;
+  left: 100px;
+  top: 200px;
+}
+.moon i {
+  position: absolute;
+  z-index: 1;
+  font-size: 40px;
+  color: white;
+  left: 200px;
+  top: 100px;
+}
+
+.rocket i {
+  position: absolute;
+  z-index: 1;
+  font-size: 20px;
+  color: white;
+  left: 1300px;
+  top: 200px;
+}
+
+.app-title {
+  font-size: 50px;
+  font-weight: bold;
+  color: black;
+}
+
+.app-title i {
+  width: 50px;
+  height: 50px;
+  font-size: 50px;
+  color: black;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 100px;
+}
+
+.weather-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40%;
+  height: 60%;
+  background-color: beige;
+  color: brown;
+  border-radius: 50px;
+  padding: 50px;
+}
+
+#rocket1 {
+  position: relative;
+  cursor: pointer;
+  border-radius: 100%;
+  width: 20%;
+  height: 20%;
+  z-index: 2;
+  margin-top: 20%;
+  left: 20%;
+}
+
+.weather-contents {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.icons img {
+  width: 200px;
+  flex-grow: 1;
+  border-radius: 50%;
+  background: black;
+}
+
+.temperature {
+  font-size: 30px;
+  color: black;
+  flex-grow: 1;
+}
+
+.Description {
+  font-size: 30px;
+  color: black;
+  flex-grow: 1;
+}
+
+.Place {
+  font-size: 30px;
+  color: black;
+  flex-grow: 1;
+}
+
+.b1 {
+  position: absolute;
+  z-index: 2;
+  top: 800px;
+  font-size: 100px;
+  color: beige;
+  left: 0%;
+  width: 10%;
+  height: 10%;
+}
+.b2 {
+  position: absolute;
+  z-index: 2;
+  top: 800px;
+  font-size: 100px;
+  color: beige;
+  left: 85%;
+}
+
+.note {
+  font-size: 15px;
+  color: white;
+}

@@ -1,48 +1,57 @@
-
 navigator.geolocation.getCurrentPosition(geolocation, error);
 
-function geolocation(position){
-   let latitude=position.coords.latitude;
-   let longitude=position.coords.longitude;
-   console.log(position);
-   console.log(latitude);
-   console.log(longitude);
-   getData(latitude,longitude);
-   console.log("here1");
-   //getWeather(data);
+function geolocation(position) {
+  let latitude = position.coords.latitude;
+  let longitude = position.coords.longitude;
+  console.log(position);
+  console.log(latitude);
+  console.log(longitude);
+  getData(latitude, longitude);
 }
 
-function error(position){
-   console.log(position);
+function error(position) {
+  console.log(position);
 }
 
-function getData(latitude, longitude){
-let api = 'https://fcc-weather-api.glitch.me/api/current?lat='+latitude+'&lon='+longitude;
+function getData(latitude, longitude) {
+  let api =
+    "https://fcc-weather-api.glitch.me/api/current?lat=" +
+    latitude +
+    "&lon=" +
+    longitude;
 
-   fetch(api)
-      .then(function(response){
-         let data=response.json();
-         return data;
-      })
-      .then(function(data){
-         console.log("here"+data);
-         getWeather(data);
-      });
-  
+  fetch(api)
+    .then(function (response) {
+      let data = response.json();
+      return data;
+    })
+    .then(function (data) {
+      console.log("here" + data);
+      getWeather(data);
+    });
 }
 
-function getWeather(data){
- let icon = data.weather[0].icon;
- let description=data.weather[0].description;
- let temp= data.main.temp;
- let humidity=data.main.humidity;
- let feelslike=data.main.feels_like;
- let wind_speed=data.wind.speed;
- let place= data.name;
- let country=data.sys.country;
- console.log(description);
- console.log(temp);
- js_html=`
+function getWeather(data) {
+  let icon = data.weather[0].icon;
+  let description = data.weather[0].description;
+  let temp = data.main.temp;
+  let humidity = data.main.humidity;
+  let feelslike = data.main.feels_like;
+  let wind_speed = data.wind.speed;
+  let place = data.name;
+  let country = data.sys.country;
+  let image = "earth1.jpg";
+
+  console.log(description);
+  console.log(temp);
+  if (description == "broken clouds") {
+    icon = "brokenclouds.jpg";
+  }
+  js_html_bk = `
+ <div class="background">
+<img src="${image}">
+</div>`;
+  js_html = `
  <div class="weather-contents"> 
  <div class="icons">
  <p>
@@ -65,8 +74,7 @@ function getWeather(data){
    </p>
 </div>
 </div>
-    `
-document.querySelector('.weather-contents').innerHTML=js_html;  //selector all didnot work
+    `;
+  document.querySelector(".weather-contents").innerHTML = js_html; //selector all didnot work
+  document.querySelector(".background").innerHTML = js_html_bk;
 }
-
-

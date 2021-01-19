@@ -1,24 +1,17 @@
 <!DOCTYPE html>
 <head>
+    <meta content='width=device-width, initial-scale=1' name='viewport'>
     <title>Weather Now</title>
-    <link rel="stylesheet" href="weather-style.css">
+    <link rel="stylesheet" href="desktop.css">
     <script src="https://kit.fontawesome.com/c939d0e917.js"></script>
-    <style>
-        #rocket1{
-          position: relative;
-          cursor: pointer;
-          left:1400px;
-          top:100px;
-          border-radius:50%;
-          right:100px;
-        }
-      </style>
+    
 </head>
 <body>
-    <div class="note">
-        Click on the balloon!
+    <div class="background">
+        <img id="backimage" src="clearsky.jpg">
     </div>
-        <img id="rocket1"src="rocket23.png">
+    <img id="rocket1"src="hotballoon.png">
+   
     <div class="star">
         <i class="fas fa-star"></i>
     </div>
@@ -32,22 +25,18 @@
         <i class="fas fa-rocket"></i>
     </div>
     <div class="b1">
-        <i class="fas fa-building"></i>
+        
     </div>
     <div class="b2">
-        <i class="far fa-building"></i>
+       
     </div>
-    <div class="b3">
-        <i class="far fa-building"></i>
-    </div>
-    <div class="b4">
-        <i class="fas fa-church"></i>
-    </div>
+
     <div class="container">
+       
     <div class="weather-container">
-     <div class="app-title">
-         Wea<i class="fas fa-umbrella"></i>her N<i class="fas fa-sun"></i>w!  
-     </div>
+    <div class="app-title">
+        Wea<i class="fas fa-umbrella"></i>her N<i class="fas fa-sun"></i>w!  
+    </div>
     <div class="weather-contents">
     
     <div class="icons">
@@ -59,7 +48,7 @@
 
     <div class="temperature">
          <p>
-            26'C
+            Please allow location access!
         </p>
     </div>
 
@@ -81,7 +70,9 @@
     
 </div>
 </div>
+
 </div>
+
 <script>
     rocket1.onclick= function() {
       let start = Date.now();
@@ -89,11 +80,11 @@
       let timer = setInterval(function() {
         let timePassed = Date.now() - start;
 
-        rocket1.style.top= timePassed / 5 + 'px';
+        rocket1.style.top= timePassed/10 + 'px';
 
-        if (timePassed > 5000) clearInterval(timer);
+        if (timePassed > 7000) clearInterval(timer);
 
-      }, 20);
+      }, 5);
     }
   </script>
 
